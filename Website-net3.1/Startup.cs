@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MongoDB.Bson;
 using Website.Areas.Identity;
 using Website.Data;
 
@@ -33,7 +34,7 @@ namespace Website
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddIdentityMongoDbProvider<MongoUser, MongoRole>(identityOptions =>
+            services.AddIdentityMongoDbProvider<MongoUser, MongoRole, ObjectId>(identityOptions =>
                 {
                     identityOptions.Password.RequiredLength = 6;
                     identityOptions.Password.RequireLowercase = false;
@@ -42,12 +43,13 @@ namespace Website
                     identityOptions.Password.RequireDigit = false;
                     identityOptions.User.RequireUniqueEmail = true;
                     identityOptions.SignIn.RequireConfirmedAccount = true;
-                }, mongoIdentityOptions => {
+                }, mongoIdentityOptions =>
+                {
                     mongoIdentityOptions.ConnectionString = Configuration.GetConnectionString("MongoDb");
                 })
                 .AddDefaultTokenProviders()
                 .AddDefaultUI();
-            
+
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
