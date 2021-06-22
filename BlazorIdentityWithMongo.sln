@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website-net3.1", "Website-net3.1\Website-net3.1.csproj", "{88F638BB-50EC-4B03-A37A-85B8A4D7F2A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website-net5.0", "Website-net5.0\Website-net5.0.csproj", "{67B0CA25-0A2F-4FAC-B1C8-BA994F2F5805}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{88F638BB-50EC-4B03-A37A-85B8A4D7F2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88F638BB-50EC-4B03-A37A-85B8A4D7F2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88F638BB-50EC-4B03-A37A-85B8A4D7F2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B0CA25-0A2F-4FAC-B1C8-BA994F2F5805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B0CA25-0A2F-4FAC-B1C8-BA994F2F5805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B0CA25-0A2F-4FAC-B1C8-BA994F2F5805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B0CA25-0A2F-4FAC-B1C8-BA994F2F5805}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
